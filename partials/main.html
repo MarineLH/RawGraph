@@ -2,52 +2,56 @@
 
 	<section class="" id="load-data">
 
+
 		<div class="container">
-
 			<div class="row">
-
-					<div class="col-lg-2">
-
-						<h3 id="data">Load your data
-							<!--<button type="button"
-								class="choose btn btn-default"
-								ng-model="sample"
-								placeholder="or choose one of our samples"
-								ng-options="s as s.title for s in samples" bs-select>
-							</button>-->
-
-						</h3>
-
-					</div>
-
-					<div class="col-lg-10">
-						<h3><span ng-show="parsed && text.length" class="small text-mono">{{fileName | decodeUrl}}</span>
-							<span class="list-type pull-right" ng-show="data.length">
-								<i class="type fa fa-align-left breath-left"
-								data-toggle="tooltip"
-								data-title="View as Text"
-								ng-click="dataView='text'" ng-class="{selected:dataView!='table'}"></i>
-								<i class="type fa fa-table breath-left"
-								data-toggle="tooltip"
-								data-title="View as Table"
-								ng-click="dataView='table'" ng-class="{selected:dataView=='table'}"></i>
-							</span>
-							<span class="clearfix"></span>
-						</h3>
-					</div>
-
+				<div class="col-lg-12">
+					<img class="tutorial" alt="logo" src="/imgs/tutorial.png">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<h3><span ng-show="parsed && text.length" class="small text-mono">{{fileName | decodeUrl}}</span>
+						<span class="list-type pull-right" ng-show="data.length">
+							<i class="type fa fa-align-left breath-left" data-toggle="tooltip" data-title="View as Text" ng-click="dataView='text'"
+							 ng-class="{selected:dataView!='table'}"></i>
+							<i class="type fa fa-table breath-left" data-toggle="tooltip" data-title="View as Table" ng-click="dataView='table'"
+							 ng-class="{selected:dataView=='table'}"></i>
+						</span>
+						<span class="clearfix"></span>
+					</h3>
 				</div>
 
-
+			</div>
 			<div class="row">
 
 					<div class="col-lg-2">
 
 						<ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
-							<li role="presentation" ng-class="{active:!parsed && importMode=='clipboard'}"><a href="#" ng-click="parsed=false;importMode='clipboard'"><i class="fa fa-clipboard breath-right"></i>Paste</a></li>
-				      <li role="presentation" ng-class="{active:!parsed && importMode=='file'}"><a href="#" ng-click="parsed=false;importMode='file'"><i class="fa fa-file-text breath-right"></i>Upload a file</a></li>
-				      <li role="presentation" ng-class="{active:!parsed && importMode=='url'}"><a href="#" ng-click="parsed=false;importMode='url'"><i class="fa fa-cloud breath-right"></i>From URL</a></li>
-							<li role="presentation" ng-class="{active:!parsed && importMode=='sample'}"><a href="#" ng-click="parsed=false;importMode='sample'"><i class="fa fa-gift breath-right"></i>Try our samples</a></li>
+							<li role="presentation" ng-class="{active:!parsed && importMode=='clipboard'}">
+								<a href="#" ng-click="parsed=false;importMode='clipboard'">
+									<i class="fa fa-clipboard breath-right"></i>
+									Paste
+								</a>
+							</li>
+						    <li role="presentation" ng-class="{active:!parsed && importMode=='file'}">
+								<a href="#" ng-click="parsed=false;importMode='file'">
+									<i class="fa fa-file-text breath-right"></i>
+									Upload a file
+								</a>
+							</li>
+						    <li role="presentation" ng-class="{active:!parsed && importMode=='url'}">
+								<a href="#" ng-click="parsed=false;importMode='url'">
+									<i class="fa fa-cloud breath-right"></i>
+									From URL
+								</a>
+							</li>
+							<li role="presentation" ng-class="{active:!parsed && importMode=='sample'}">
+								<a href="#" ng-click="parsed=false;importMode='sample'">
+									<i class="fa fa-gift breath-right"></i>
+									Try our samples
+								</a>
+							</li>
 				    </ul>
 
 					</div>
@@ -168,12 +172,7 @@
 							<!--<a ng-show="!unstacked" ng-click="unstack()" class="btn btn-default">Stack data</a>
 							<a ng-show="unstacked" ng-click="stack()" class="pull-right">Unstack data<i class="fa fa-toggle-on breath-left"></i></a>-->
 
-
-
 						</div>
-
-
-
 
 					</div>
 
@@ -188,9 +187,9 @@
 
 		</div>
 
-		</section>
+	</section>
 
-		<section data-ng-show="error" >
+<section data-ng-show="error" >
 
 			<div class="container">
 				<h2><strong>Ouch.</strong> It seems like RAW encountered some problems while parsing your data. Please, be sure everything is ok with your data. Often this is due to some missing delimiters. If you want to use a <a href="http://en.wikipedia.org/wiki/Delimiter">delimiter char</a> as string literal, please include it in double quotes. See our <a href="https://github.com/densitydesign/raw/wiki/FAQs#raw-says-there-is-something-wrong-with-my-data">FAQs</a> for more information.</h2>
@@ -473,3 +472,5 @@
 	<!--</div>-->
 <!--</section>-->
 </div>
+
+	
