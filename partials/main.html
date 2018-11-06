@@ -179,13 +179,18 @@
 
 			</div>
 
+			<div class="row">
+				<div class="col-lg-12  text-center">
+						<button type="button" class="btn btn-default" onclick="displayCharts()"> UPLOAD File </button>
+				</div>
+			</div>
 
 
 		</div>
 
 		</section>
 
-		<section data-ng-show="error">
+		<section data-ng-show="error" >
 
 			<div class="container">
 				<h2><strong>Ouch.</strong> It seems like RAW encountered some problems while parsing your data. Please, be sure everything is ok with your data. Often this is due to some missing delimiters. If you want to use a <a href="http://en.wikipedia.org/wiki/Delimiter">delimiter char</a> as string literal, please include it in double quotes. See our <a href="https://github.com/densitydesign/raw/wiki/FAQs#raw-says-there-is-something-wrong-with-my-data">FAQs</a> for more information.</h2>
@@ -196,6 +201,7 @@
 
 		<section class="dark" data-ng-show="!error && data.length && parsed">
 
+		<section class="dark" id="chartsSection" style="display: none">
 			<div class="container">
 
 				<div>
@@ -242,6 +248,7 @@
 										</div>
 									</div>
 
+
 									<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
 										<a href="https://github.com/densitydesign/raw/wiki/Adding-New-Charts" target="_blank">
 											<div class="layout yours">
@@ -266,204 +273,203 @@
 
 					</div>
 
-
 				</div>
 
 			</div>
 
 		</section>
 
-		<section class="" data-ng-show="!error && data.length && parsed">
+		<!--<section class="" data-ng-show="!error && data.length && parsed">-->
 
-			<div class="container">
+			<!--<div class="container">-->
 
-				<div id="mapping" class="row-fluid">
+				<!--<div id="mapping" class="row-fluid">-->
 
-					<div>
-						<h3>Map your Dimensions
-							<a data-toggle="tooltip"
-							data-title="Clear all"
-							ng-click="model.clear()" class="pull-right light"><i class="fa fa-trash-o"></i></a>
-							<span class="clearfix"></span>
-						</h3>
-						<!--<p class="help-block">Drag your into </p>-->
-					</div>
-
-
-					<div class="row">
-
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div draggable>
-								<ul class="list-unstyled dimensions-list">
-									<li class="dimension" data-dimension="{{dimension}}" ng-repeat="dimension in metadata track by $index">
-										<span class="dimension-key">{{ dimension.key }}</span>
-										<span class="dimension-type">{{dimension.type}}</span>
-										<span class="dimension-icon pull-right"><i class="fa fa-arrow-right"></i></span>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col-lg-9 col-md-9 col-sm-6 mapping">
-							<div class="sticky">
-								<div
-								class="row"
-								group every="3"
-								watch="model">
-
-								<div
-								class="col-lg-4 col-md-4 dimensions-wrapper"
-								ng-repeat="dimension in model.dimensions().values() track by $index" ng-init="open=false">
-
-								<div class="dimensions-model">
-
-									<!--<div class="dimension-multiple">
-
-										<i class="fa fa-tag"
-										data-toggle="tooltip"
-										data-title="You can drag only one dimension here"
-										data-ng-show="!dimension.multiple()"></i>
-
-										<i class="fa fa-tags"
-										data-toggle="tooltip"
-										data-title="You can drag more than one dimension here"
-										data-ng-show="dimension.multiple()"></i>
-									</div>-->
-
-									<i class="fa fa-tags"
-									data-toggle="tooltip"
-									data-title="You can drag more than one dimension here"
-									data-ng-show="dimension.multiple()"></i>
-
-									<i class="fa fa-asterisk dimension-required"
-										data-toggle="tooltip"
-										data-title="Required"
-										data-ng-show="dimension.required()"></i>
-
-									<!--<a class="dimension-info"
-									data-toggle="tooltip"
-									data-title="Show description"
-									ng-click="open = !open" ng-show="dimension.description()">
-									<i class="fa fa-info dimension-info-toggle"></i>
-									</a>-->
-
-								<p class="dimension-title">{{dimension.title()}}</p>
-								<ul
-									sortable
-									title="dimension.title()"
-									value="dimension.value"
-									multiple="dimension.multiple()"
-									types="dimension.types()"
-									class="dimensions-container list-unstyled">
-								</ul>
-
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-
-		</div>
-
-	</div>
-
-</div>
+					<!--<div>-->
+						<!--<h3>Map your Dimensions-->
+							<!--<a data-toggle="tooltip"-->
+							<!--data-title="Clear all"-->
+							<!--ng-click="model.clear()" class="pull-right light"><i class="fa fa-trash-o"></i></a>-->
+							<!--<span class="clearfix"></span>-->
+						<!--</h3>-->
+						<!--&lt;!&ndash;<p class="help-block">Drag your into </p>&ndash;&gt;-->
+					<!--</div>-->
 
 
-</div>
+					<!--<div class="row">-->
 
-</section>
+						<!--<div class="col-lg-3 col-md-3 col-sm-6">-->
+							<!--<div draggable>-->
+								<!--<ul class="list-unstyled dimensions-list">-->
+									<!--<li class="dimension" data-dimension="{{dimension}}" ng-repeat="dimension in metadata track by $index">-->
+										<!--<span class="dimension-key">{{ dimension.key }}</span>-->
+										<!--<span class="dimension-type">{{dimension.type}}</span>-->
+										<!--<span class="dimension-icon pull-right"><i class="fa fa-arrow-right"></i></span>-->
+									<!--</li>-->
+								<!--</ul>-->
+							<!--</div>-->
+						<!--</div>-->
 
-<section class="dark" data-ng-show="!error && data.length && parsed">
+						<!--<div class="col-lg-9 col-md-9 col-sm-6 mapping">-->
+							<!--<div class="sticky">-->
+								<!--<div-->
+								<!--class="row"-->
+								<!--group every="3"-->
+								<!--watch="model">-->
 
-	<div class="container">
+								<!--<div-->
+								<!--class="col-lg-4 col-md-4 dimensions-wrapper"-->
+								<!--ng-repeat="dimension in model.dimensions().values() track by $index" ng-init="open=false">-->
 
-		<h3 id="options">
-			Customize your Visualization
-		</h3>
+								<!--<div class="dimensions-model">-->
 
-		<div class="row">
+									<!--&lt;!&ndash;<div class="dimension-multiple">-->
 
-			<div class="col-lg-3">
-				<ul class="list-unstyled">
-					<li ng-repeat="option in chart.options() track by $index" chart-option>
-						<p class="option-title text-capitalize">
-							{{option.title()}}
-							<a data-ng-show="option.fitToWidth()"
-							data-toggle="tooltip"
-							data-title="Fit to width"
-							class="option-fit pull-right"><i class="fa fa-expand"></i></a>
-						</p>
+										<!--<i class="fa fa-tag"-->
+										<!--data-toggle="tooltip"-->
+										<!--data-title="You can drag only one dimension here"-->
+										<!--data-ng-show="!dimension.multiple()"></i>-->
 
-						<div ng-switch="" on="option.type()">
-							<input type="number" min="0" class="form-control" ng-model="option.value" ng-switch-when="number"></input>
+										<!--<i class="fa fa-tags"-->
+										<!--data-toggle="tooltip"-->
+										<!--data-title="You can drag more than one dimension here"-->
+										<!--data-ng-show="dimension.multiple()"></i>-->
+									<!--</div>&ndash;&gt;-->
 
-							<div ng-switch-when="checkbox">
-								<label class="">
-									<input type="checkbox" ng-model="option.value"/>
-								</label>
-							</div>
+									<!--<i class="fa fa-tags"-->
+									<!--data-toggle="tooltip"-->
+									<!--data-title="You can drag more than one dimension here"-->
+									<!--data-ng-show="dimension.multiple()"></i>-->
 
-							<div colors="option.value" ng-switch-when="color"></div>
+									<!--<i class="fa fa-asterisk dimension-required"-->
+										<!--data-toggle="tooltip"-->
+										<!--data-title="Required"-->
+										<!--data-ng-show="dimension.required()"></i>-->
 
-							<button
-							type="button"
-							class="btn btn-default"
-							ng-model="option.value"
-							bs-options="opt for opt in option.values()" bs-select ng-switch-when="list">
-							Action <span class="caret"></span>
-							</button>
+									<!--&lt;!&ndash;<a class="dimension-info"-->
+									<!--data-toggle="tooltip"-->
+									<!--data-title="Show description"-->
+									<!--ng-click="open = !open" ng-show="dimension.description()">-->
+									<!--<i class="fa fa-info dimension-info-toggle"></i>-->
+									<!--</a>&ndash;&gt;-->
 
-						<input type="text" min="0" class="form-control" ng-model="option.value" ng-switch-default="ng-switch-default"></input>
+								<!--<p class="dimension-title">{{dimension.title()}}</p>-->
+								<!--<ul-->
+									<!--sortable-->
+									<!--title="dimension.title()"-->
+									<!--value="dimension.value"-->
+									<!--multiple="dimension.multiple()"-->
+									<!--types="dimension.types()"-->
+									<!--class="dimensions-container list-unstyled">-->
+								<!--</ul>-->
 
-					</div>
+						<!--</div>-->
 
-				</li>
-			</ul>
-		</div>
+					<!--</div>-->
 
-		<div class="col-lg-9">
-			<div class="chart-resize">
-				<div ng-show="model.isValid()" id="chart" chart></div>
-			</div>
-			<div class="text-muted text-center" ng-show="!model.isValid()">
-				<!--<i class="fa fa-hand-o-up breath-right"></i>-->
-				<h4><span ng-bind-html="model.instruction()"></span></h4>
-			</div>
+				<!--</div>-->
+			<!--</div>-->
 
-		</div>
+		<!--</div>-->
 
-	</div>
-</div>
+	<!--</div>-->
 
-</section>
+<!--</div>-->
 
-<section class="dark" ng-show="model.isValid()" style="padding-bottom:50px">
 
-	<div class="container">
+<!--</div>-->
 
-		<div>
+<!--</section>-->
 
-			<div id="export" class="row">
+<!--<section class="dark" data-ng-show="!error && data.length && parsed">-->
 
-				<div class="col-lg-3">
-					<h3><i class="fa fa-download breath-right"></i>Download</h3>
-					<downloader></downloader>
-				</div>
+	<!--<div class="container">-->
 
-				<div class="col-lg-9">
-					<h3 ng-show="!chart.isDrawing()" id="data"><i class="fa fa-code breath-right"></i>Embed SVG Code</h3>
-					<h3 ng-show="chart.isDrawing()">loading <span class="glyphicon glyphicon-refresh spinning"></span></h3>
-					<coder ng-show="!chart.isDrawing()"></coder>
-					<p ng-show="!chart.isDrawing()" class="light">Copy the snippet above into your HTML code to embed the visualization
-						<a class="pull-right" id="copy-button" copy-button data-clipboard-target="source" data-container="body"><i class="fa fa-clipboard"></i></a>
-					</p>
-				</div>
+		<!--<h3 id="options">-->
+			<!--Customize your Visualization-->
+		<!--</h3>-->
 
-			</div>
-		</div>
+		<!--<div class="row">-->
 
-	</div>
-</section>
+			<!--<div class="col-lg-3">-->
+				<!--<ul class="list-unstyled">-->
+					<!--<li ng-repeat="option in chart.options() track by $index" chart-option>-->
+						<!--<p class="option-title text-capitalize">-->
+							<!--{{option.title()}}-->
+							<!--<a data-ng-show="option.fitToWidth()"-->
+							<!--data-toggle="tooltip"-->
+							<!--data-title="Fit to width"-->
+							<!--class="option-fit pull-right"><i class="fa fa-expand"></i></a>-->
+						<!--</p>-->
+
+						<!--<div ng-switch="" on="option.type()">-->
+							<!--<input type="number" min="0" class="form-control" ng-model="option.value" ng-switch-when="number"></input>-->
+
+							<!--<div ng-switch-when="checkbox">-->
+								<!--<label class="">-->
+									<!--<input type="checkbox" ng-model="option.value"/>-->
+								<!--</label>-->
+							<!--</div>-->
+
+							<!--<div colors="option.value" ng-switch-when="color"></div>-->
+
+							<!--<button-->
+							<!--type="button"-->
+							<!--class="btn btn-default"-->
+							<!--ng-model="option.value"-->
+							<!--bs-options="opt for opt in option.values()" bs-select ng-switch-when="list">-->
+							<!--Action <span class="caret"></span>-->
+							<!--</button>-->
+
+						<!--<input type="text" min="0" class="form-control" ng-model="option.value" ng-switch-default="ng-switch-default"></input>-->
+
+					<!--</div>-->
+
+				<!--</li>-->
+			<!--</ul>-->
+		<!--</div>-->
+
+		<!--<div class="col-lg-9">-->
+			<!--<div class="chart-resize">-->
+				<!--<div ng-show="model.isValid()" id="chart" chart></div>-->
+			<!--</div>-->
+			<!--<div class="text-muted text-center" ng-show="!model.isValid()">-->
+				<!--&lt;!&ndash;<i class="fa fa-hand-o-up breath-right"></i>&ndash;&gt;-->
+				<!--<h4><span ng-bind-html="model.instruction()"></span></h4>-->
+			<!--</div>-->
+
+		<!--</div>-->
+
+	<!--</div>-->
+<!--</div>-->
+
+<!--</section>-->
+
+<!--<section class="dark" ng-show="model.isValid()" style="padding-bottom:50px">-->
+
+	<!--<div class="container">-->
+
+		<!--<div>-->
+
+			<!--<div id="export" class="row">-->
+
+				<!--<div class="col-lg-3">-->
+					<!--<h3><i class="fa fa-download breath-right"></i>Download</h3>-->
+					<!--<downloader></downloader>-->
+				<!--</div>-->
+
+				<!--<div class="col-lg-9">-->
+					<!--<h3 ng-show="!chart.isDrawing()" id="data"><i class="fa fa-code breath-right"></i>Embed SVG Code</h3>-->
+					<!--<h3 ng-show="chart.isDrawing()">loading <span class="glyphicon glyphicon-refresh spinning"></span></h3>-->
+					<!--<coder ng-show="!chart.isDrawing()"></coder>-->
+					<!--<p ng-show="!chart.isDrawing()" class="light">Copy the snippet above into your HTML code to embed the visualization-->
+						<!--<a class="pull-right" id="copy-button" copy-button data-clipboard-target="source" data-container="body"><i class="fa fa-clipboard"></i></a>-->
+					<!--</p>-->
+				<!--</div>-->
+
+			<!--</div>-->
+		<!--</div>-->
+
+	<!--</div>-->
+<!--</section>-->
 </div>
