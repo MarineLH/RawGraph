@@ -2,6 +2,15 @@
 
 /* Controllers */
 
+function displayCharts()
+{
+    $("#load-data").hide();
+    $("#chartsSection").show();
+
+    document.getElementById("chartsSection").style.display;
+}
+
+
 angular.module('raw.controllers', [])
 
   .controller('RawCtrl', function ($scope, dataService, $http, $timeout, $sce) {
