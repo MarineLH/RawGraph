@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  background-color: #F5F5F5;
+  background-color: #3847a0;
   font-family: 'karla', Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
@@ -92,21 +92,21 @@ h4 {
   height: auto !important;
   height: 100%;
   /* Negative indent footer by it's height */
-  margin: 0 auto -215px;
+  margin: 0 auto;
   padding-bottom: 215px;
 
 }
 
 #push,
 #footer {
-  height: 215px;
+  height: 50px;
 }
 
 #footer {
   background-color: #565656;
   font-size: 14px;
   color: #bbb;
-  padding: 0px 20px;
+  padding: 20px 20px;
 }
 
 #footer a {
@@ -123,7 +123,7 @@ h4 {
 }
 
 #footer .container {
-  padding: 30px 15px;
+  padding: 0 15px;
 }
 
 @media (max-width: 767px) {
@@ -135,8 +135,8 @@ h4 {
   }
 }
 
-.wrapper {
-}
+/* .wrapper {
+} */
 
 section {
   padding: 40px 0px;
@@ -160,8 +160,8 @@ section.dark {
   z-index: 10000;
   border-radius: 0px;
   padding: 5px 0px;
-  margin-bottom: 20px;
-  background-color: #fff;
+  /* margin-bottom: 20px; */
+  background-color: #3847a0;
 }
 
 .navbar-brand {
@@ -230,8 +230,18 @@ section.dark {
   background-color: #2DD8B1;
 }
 
+.tutorial{
+  display: block;
+  height : 25px;
+  margin: 20px auto; 
+}
+
+/* .tuto-style{
+  justify-content : center;
+} */
+
 .navbar-brand>img {
-    max-height: 20px;
+    max-height: 60px;
 }
 
 .margin-bottom {
