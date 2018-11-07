@@ -37,11 +37,17 @@ h2 a {
   width: 145px;
 }
 
+#btnDownload {
+  padding-bottom: 10px;
+}
+
 #btnTuneChart {
   padding-bottom: 10px;
 }
 
-#buttonTune {
+
+
+#buttonTune, #buttonDownload{
   background-color: #3847a0 ;
   height: 55px;
   width: 145px;

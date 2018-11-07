@@ -6,8 +6,6 @@ function displayCharts()
 {
     $("#load-data").hide();
     $("#chartsSection").show();
-
-    document.getElementById("chartsSection").style.display;
 }
 
 
@@ -17,8 +15,16 @@ function displayCustom() {
     $("#customSection").show();
     $("#diagramSection").show();
 
+}
+
+function displayDiagram(){
+
+    $("#customSection").hide();
+    $("#diagramSection").hide();
+    $("#downloadSection").show();
 
 }
+
 
 angular.module('raw.controllers', [])
 
