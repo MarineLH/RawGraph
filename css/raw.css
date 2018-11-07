@@ -144,7 +144,7 @@ section {
 }
 
 section.light {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
 }
 
 section.dark {
@@ -198,7 +198,7 @@ section.dark {
 }
 
 .navbar .nav>li>a:focus,
-.navbar .nav>li>a:hover,
+/* .navbar .nav>li>a:hover, */
 .navbar .nav>.active>a,
 .navbar .nav>.active>a:hover,
 .navbar .nav>.active>a:focus {
@@ -219,7 +219,7 @@ section.dark {
   border: none;
   padding: 10px 12px;
   background-color: transparent;
-  color: #5A5E5A;
+  color: rgb(255, 255, 255);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -235,6 +235,22 @@ section.dark {
   display: block;
   height : 25px;
   margin: 20px auto; 
+}
+
+.tutorial_responsive{
+  display: none;
+  height : 140px;
+  margin: 20px auto; 
+}
+
+@media only screen and (max-width: 1200px){
+  .tutorial{
+    display: none;
+  }
+
+  .tutorial_responsive{
+    display: block;
+  }
 }
 
 /* .tuto-style{
