@@ -178,7 +178,7 @@ section {
 }
 
 section.light {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
 }
 
 section.dark {
@@ -232,7 +232,7 @@ section.dark {
 }
 
 .navbar .nav>li>a:focus,
-.navbar .nav>li>a:hover,
+/* .navbar .nav>li>a:hover, */
 .navbar .nav>.active>a,
 .navbar .nav>.active>a:hover,
 .navbar .nav>.active>a:focus {
@@ -253,7 +253,7 @@ section.dark {
   border: none;
   padding: 10px 12px;
   background-color: transparent;
-  color: #5A5E5A;
+  color: rgb(255, 255, 255);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -269,6 +269,22 @@ section.dark {
   display: block;
   height : 25px;
   margin: 20px auto; 
+}
+
+.tutorial_responsive{
+  display: none;
+  height : 140px;
+  margin: 20px auto; 
+}
+
+@media only screen and (max-width: 1200px){
+  .tutorial{
+    display: none;
+  }
+
+  .tutorial_responsive{
+    display: block;
+  }
 }
 
 /* .tuto-style{
@@ -466,7 +482,7 @@ textarea:focus {
 
 .btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled:active, .btn-success[disabled]:active, fieldset[disabled] .btn-success:active, .btn-success.disabled.active, .btn-success[disabled].active, fieldset[disabled] .btn-success.active,
 .btn-success {
-  background-color: #0dc4a3;
+  background-color: #00ffad;
 }
 
 .btn-success.disabled {
@@ -474,11 +490,16 @@ textarea:focus {
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
-  background-color: #0dc4a3;
+  background-color: #00ffad;
 }
 
 .btn .caret {
   margin-left: 20px;
+}
+
+
+.btn-default {
+  background-color: #00ffad;
 }
 
 .dropdown-menu {
