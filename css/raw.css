@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
 
-  background-color: #F5F5F5;
+  background-color: #3847a0;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
 }
@@ -432,7 +432,7 @@ textarea:focus {
 
 .btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled:active, .btn-success[disabled]:active, fieldset[disabled] .btn-success:active, .btn-success.disabled.active, .btn-success[disabled].active, fieldset[disabled] .btn-success.active,
 .btn-success {
-  background-color: #0dc4a3;
+  background-color: #00ffad;
 }
 
 .btn-success.disabled {
@@ -440,11 +440,16 @@ textarea:focus {
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
-  background-color: #0dc4a3;
+  background-color: #00ffad;
 }
 
 .btn .caret {
   margin-left: 20px;
+}
+
+
+.btn-default {
+  background-color: #00ffad;
 }
 
 .dropdown-menu {
