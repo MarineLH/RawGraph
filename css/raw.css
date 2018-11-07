@@ -1,8 +1,9 @@
 html,
 body {
   height: 100%;
+
   background-color: #3847a0;
-  font-family: 'karla', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
 }
 
@@ -74,7 +75,7 @@ h4 {
 }
 
 .text-mono {
-  font-family: Cousine, Menlo, Monaco, Courier, monospace;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .help-block {
@@ -147,7 +148,7 @@ section.light {
 }
 
 section.dark {
-  background-color: #ECECEC;
+  background-color: rgb(255, 255, 255);
 }
 
 
@@ -169,7 +170,7 @@ section.dark {
   font-size: 28px;
   font-weight: 900;
   text-transform: uppercase;
-  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -331,7 +332,7 @@ textarea:focus {
     width: 100%;
     height: 275px;
     resize: none;
-    font-family: Cousine, Menlo, Monaco, Courier, monospace;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 11px;
 }
 
@@ -408,7 +409,7 @@ textarea:focus {
 /* Tooltips */
 
 .tooltip {
-  font-family: 'karla', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 12px;
 }
 
@@ -431,7 +432,7 @@ textarea:focus {
 
 .btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled:active, .btn-success[disabled]:active, fieldset[disabled] .btn-success:active, .btn-success.disabled.active, .btn-success[disabled].active, fieldset[disabled] .btn-success.active,
 .btn-success {
-  background-color: #0dc4a3;
+  background-color: #00ffad;
 }
 
 .btn-success.disabled {
@@ -439,11 +440,16 @@ textarea:focus {
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
-  background-color: #0dc4a3;
+  background-color: #00ffad;
 }
 
 .btn .caret {
   margin-left: 20px;
+}
+
+
+.btn-default {
+  background-color: #00ffad;
 }
 
 .dropdown-menu {
@@ -583,6 +589,14 @@ textarea:focus {
   margin-right: 3px;
 }
 
+h3#layout{
+  font-size: 2em;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  color: #2E4E99;
+}
+
 .layout {
   position: relative;
   background-color: #fff;
@@ -603,11 +617,12 @@ textarea:focus {
 }
 
 .layout.selected {
-  background-color: #0dc4a3;
+  background-color: #00D9B7;
 }
 
 .layout-title {
-  color: #000;
+  color: #2E4E99;
+  font-weight: bold;
 }
 
 .layout-category {
@@ -900,7 +915,7 @@ div[colors] .sample-color {
   outline: 0px;
   height: auto;
   border: none;
-  font-family: 'Cousine', 'Menlo', 'Monaco', Courier, monospace;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 div[colors] .sample-color:focus {
@@ -1006,7 +1021,7 @@ div[colors] input[type="text"] {
 
 textarea.source-area {
   width: 100%;
-  font-family: Cousine, Menlo, Monaco, Courier, monospace;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 11px;
   color: #999999;
   padding: 6px 10px;
@@ -1042,7 +1057,7 @@ textarea.source-area {
 }
 
 .json-node {
-  font-family: Cousine, Menlo, Monaco, Courier, monospace;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 11px;
   padding: 3px;
   margin-left: 15px;
@@ -1107,7 +1122,7 @@ textarea.source-area {
   margin-bottom: 10px;
   background-color: #fff;
   border-radius: 2px;
-  font-family: Cousine, Menlo, Monaco, Courier, monospace;
+  font-family: 'Source Sans Pro', sans-serif;
 
   /* Internet Explorer 10 */
   display:-ms-flexbox;
@@ -1160,7 +1175,7 @@ textarea.source-area {
 /* CodeMirror */
 
 .CodeMirror {
-  font-family: Cousine, Menlo, Monaco, Courier, monospace;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 11px;
   background-color: #ffffff;
   line-height: 18px;
