@@ -11,6 +11,15 @@ function displayCharts()
 }
 
 
+function displayCustom() {
+
+    $("#chartsSection").hide();
+    $("#customSection").show();
+    $("#diagramSection").show();
+
+
+}
+
 angular.module('raw.controllers', [])
 
   .controller('RawCtrl', function ($scope, dataService, $http, $timeout, $sce) {
@@ -235,10 +244,10 @@ angular.module('raw.controllers', [])
     });
 
     $scope.$watch('dataView', function (n,o){
-      if (!$('.parsed .CodeMirror')[0]) return;
-      var cm = $('.parsed .CodeMirror')[0].CodeMirror;
-      $timeout(function() { cm.refresh() });
-    });
+          if (!$('.parsed .CodeMirror')[0]) return;
+          var cm = $('.parsed .CodeMirror')[0].CodeMirror;
+          $timeout(function() { cm.refresh() });
+      });
 
     // init
     $scope.raw = raw;
